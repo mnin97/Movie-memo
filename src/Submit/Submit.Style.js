@@ -79,6 +79,7 @@ export const SubmitButton = styled.button`
   font-size: 18px;
   position: relative;
   bottom: 12px;
+  margin-right: 20px;
 `;
 
 export const TWrapper = styled.div`
@@ -102,4 +103,27 @@ export const TWrapper = styled.div`
     right: 10px;
     margin-top: 10px;
   }
+`;
+
+export const BtnWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const BackBtn = styled.button`
+  font-weight: bold;
+  align-items: center;
+  width: 100px;
+  height: 45px;
+  padding: 0px 16px;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  background-color: rgb(236, 106, 94);
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  bottom: 12px;
+  margin-left: 20px;
 `;

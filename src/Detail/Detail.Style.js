@@ -13,6 +13,7 @@ export const BigWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 100%;
 `;
 
@@ -55,8 +56,9 @@ export const ContentBox = styled.textarea`
   background-color: #ffffff;
   margin-top: 10px;
   padding-top: 30px;
-  padding-left: 30px;
-  float: right;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
 `;
 
 export const ButtonWrapper = styled.div`

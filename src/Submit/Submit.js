@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { BG } from "../\bMain/Main.Style";
 import { v4 as uuidv4 } from "uuid";
 import {
+  BackBtn,
+  BtnWrapper,
   ContentInput,
   ContentsInputWrapper,
   ScoreInput,
@@ -12,6 +14,7 @@ import {
   WriteBox2,
 } from "./Submit.Style";
 import { useState } from "react";
+import { BackButton } from "../Detail/Detail.Style";
 
 export default function SubmitPage() {
   const [title, setTitle] = useState(""); // 상태값을 관리하기위해 useState를 사용
@@ -64,9 +67,14 @@ export default function SubmitPage() {
             }}
           />
         </ContentsInputWrapper>
-        <Link to="/">
-          <SubmitButton onClick={PostRegister}>등록</SubmitButton>
-        </Link>
+        <BtnWrapper>
+          <Link to={"/"}>
+            <BackBtn>뒤로가기</BackBtn>
+          </Link>
+          <Link to="/">
+            <SubmitButton onClick={PostRegister}>등록</SubmitButton>
+          </Link>
+        </BtnWrapper>
       </WriteBox2>
     </BG>
   );
