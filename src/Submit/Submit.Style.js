@@ -24,6 +24,7 @@ export const TitleInput = styled.input`
   border: none;
   padding-left: 20px;
   font-size: 20px;
+  background-color: rgb(255, 255, 255);
 `;
 
 export const ScoreInput = styled.input`
@@ -34,6 +35,7 @@ export const ScoreInput = styled.input`
   padding-left: 20px;
   font-size: 20px;
   margin-left: 35px;
+  background-color: rgb(255, 255, 255);
 `;
 
 export const ContentsInputWrapper = styled.div`
@@ -60,5 +62,44 @@ export const ContentInput = styled.textarea`
 
   ::placeholder {
     font-size: 20px;
+  }
+`;
+
+export const SubmitButton = styled.button`
+  font-weight: bold;
+  align-items: center;
+  width: 100px;
+  height: 45px;
+  padding: 0px 16px;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  background-color: rgb(109, 86, 245);
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+  position: relative;
+  bottom: 12px;
+`;
+
+export const TWrapper = styled.div`
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top: 37px;
+  right: 100px;
+
+  div {
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-right: 15px;
+  }
+
+  p {
+    color: #ffffff;
+    font-weight: bold;
+    position: relative;
+    right: 10px;
+    margin-top: 10px;
   }
 `;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Background = styled.div`
   width: 100%;
   height: 100vh;
-  background-image: url("https://ifh.cc/g/aqKrml.jpg");
+  background-image: url("https://ifh.cc/g/M92haW.jpg");
   background-size: cover;
   background-repeat: repeat;
 `;
@@ -26,8 +26,12 @@ export const TitleBox = styled.div`
   width: 40%;
   height: 50px;
   background-color: white;
-
+  font-size: 25px;
+  font-weight: bold;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ScoreBox = styled.div`
@@ -36,13 +40,23 @@ export const ScoreBox = styled.div`
   background-color: white;
   margin-left: 10px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(109, 86, 245);
 `;
 
-export const ContentBox = styled.div`
-  width: 61.5%;
+export const ContentBox = styled.textarea`
+  width: 58%;
+  border-radius: 5px;
   height: 300px;
   background-color: #ffffff;
   margin-top: 10px;
+  padding-top: 30px;
+  padding-left: 30px;
+  float: right;
 `;
 
 export const ButtonWrapper = styled.div`

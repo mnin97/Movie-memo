@@ -3,10 +3,12 @@ import "./App.css";
 import SubmitPage from "./Submit/Submit";
 import { Routes, Route } from "react-router-dom";
 import DetailPage from "./Detail/Detail";
+import { Reset } from "styled-reset";
 
 function App() {
   return (
     <div className="App">
+      <Reset />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/submit" element={<SubmitPage />} />

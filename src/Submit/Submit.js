@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { BG, Button, TitleBox } from "../\bMain/Main.Style";
+import { BG } from "../\bMain/Main.Style";
 import { v4 as uuidv4 } from "uuid";
 import {
   ContentInput,
   ContentsInputWrapper,
   ScoreInput,
+  SubmitButton,
+  TWrapper,
   TitleInput,
   TitleInputWrapper,
   WriteBox2,
@@ -30,6 +32,10 @@ export default function SubmitPage() {
 
   return (
     <BG>
+      <TWrapper>
+        <div>Collecter</div>
+        <p>좋아하는 영화를 기록해보자!</p>
+      </TWrapper>
       <WriteBox2>
         <TitleInputWrapper>
           <TitleInput
@@ -42,7 +48,11 @@ export default function SubmitPage() {
           <ScoreInput
             type="number"
             placeholder="평점"
-            onChange={(e) => setScore(e.target.value)}
+            onChange={(e) => {
+              return e.target.value <= 10
+                ? setScore(e.target.value)
+                : (alert("10점 까지만 입력가능"), (e.target.value = ""));
+            }}
           />
         </TitleInputWrapper>
         <ContentsInputWrapper>
@@ -55,7 +65,7 @@ export default function SubmitPage() {
           />
         </ContentsInputWrapper>
         <Link to="/">
-          <Button onClick={PostRegister}>글 등록</Button>
+          <SubmitButton onClick={PostRegister}>등록</SubmitButton>
         </Link>
       </WriteBox2>
     </BG>

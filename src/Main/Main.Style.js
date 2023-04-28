@@ -1,22 +1,25 @@
 import styled from "styled-components";
 
 export const BG = styled.div`
-  width: 100%;
+  max-width: 100%;
   height: 100vh;
-  background-image: url("https://ifh.cc/g/aqKrml.jpg");
+  background-image: url("https://ifh.cc/g/M92haW.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  background-repeat: repeat;
 `;
 
 export const TitleBox = styled.div`
+  margin: 0;
   padding-right: 225px;
   padding-top: 50px;
 
   h1 {
-    font-size: 3rem;
+    font-size: 50px;
+    font-weight: bold;
     color: #ffffff;
-    margin: 0;
-    margin-left: 48px;
+    margin-left: 50px;
+    margin-bottom: 10px;
   }
 
   p {
@@ -74,15 +77,24 @@ export const Post = styled.div`
   border-radius: 6px;
   margin-left: 20px;
   background-color: #ffffff;
-
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 
   h3 {
     color: #000000;
-    position: relative;
-    right: 132px;
-    top: 14px;
-    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 25px;
+  }
+
+  p {
+    color: rgb(109, 86, 245);
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 20px;
+    padding-top: 10px;
   }
 `;
 
@@ -102,4 +114,5 @@ export const Button = styled.button`
   cursor: pointer;
   border: none;
   margin-top: 10px;
+  margin-right: 15px;
 `;
