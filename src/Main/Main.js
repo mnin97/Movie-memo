@@ -14,9 +14,9 @@ import {
 import { useState } from "react";
 
 export default function MainPage() {
-  const [posts, setPosts] = useState(JSON.parse(localStorage.getItem("posts")));
-
-  console.log(posts);
+  const [posts] = useState(JSON.parse(localStorage.getItem("posts")));
+  const [search, setSearch] = useState("");
+  const [score, setScore] = useState("");
 
   return (
     <BG>
@@ -26,18 +26,35 @@ export default function MainPage() {
       </TitleBox>
       <WriteBox>
         <InputBox>
-          <SearchInput type="text" placeholder="검색하세요" />
-          <FilterInput placeholder="평점 수" />
+          <SearchInput
+            type="text"
+            placeholder="검색하세요"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <FilterInput
+            placeholder="평점 "
+            value={score}
+            onChange={(e) => {
+              setScore(e.target.value);
+            }}
+          />
         </InputBox>
         <PostBox>
-          {posts.map((a) => (
-            <Link to="/detail" style={{ textDecoration: "none" }}>
-              <Post>
-                <h3>{a.title}</h3>
-                <p>{a.score}</p>
-              </Post>
-            </Link>
-          ))}
+          {posts
+            .filter(
+              (post) =>
+                post.title.toLowerCase().includes(search.toLowerCase()) &&
+                (score === "" || post.score == parseInt(score))
+            )
+            .map((a) => (
+              <Link to={`/detail/${a.id}`} style={{ textDecoration: "none" }}>
+                <Post>
+                  <h3>{a.title}</h3>
+                  <p>{a.score}</p>
+                </Post>
+              </Link>
+            ))}
         </PostBox>
         <ButtonBox>
           <Link to="/submit" style={{ textDecoration: "none" }}>

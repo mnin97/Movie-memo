@@ -25,14 +25,17 @@ export const TitleWrapper = styled.div`
 export const TitleBox = styled.div`
   width: 40%;
   height: 50px;
-  background-color: antiquewhite;
+  background-color: white;
+
+  border-radius: 5px;
 `;
 
 export const ScoreBox = styled.div`
   width: 20%;
   height: 50px;
-  background-color: aqua;
+  background-color: white;
   margin-left: 10px;
+  border-radius: 5px;
 `;
 
 export const ContentBox = styled.div`

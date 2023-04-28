@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BackButton,
   Background,
@@ -9,21 +10,42 @@ import {
   TitleBox,
   TitleWrapper,
 } from "./Detail.Style";
+import { Link, useParams } from "react-router-dom";
 
 export default function DetailPage() {
+  const [posts] = useState(JSON.parse(localStorage.getItem("posts")));
+  const { id } = useParams();
+  const post = posts.find((a) => a.id === id);
+
+  const handleDelete = () => {
+    const updatedPosts = posts.filter((p) => p.id !== id);
+    localStorage.setItem("posts", JSON.stringify(updatedPosts));
+    if (post) {
+      console.log(post.id); // logs the deleted post ID to the console
+    }
+  };
+
   return (
     <Background>
-      <BigWrapper>
-        <TitleWrapper>
-          <TitleBox>타이틀</TitleBox>
-          <ScoreBox>평점</ScoreBox>
-        </TitleWrapper>
-        <ContentBox></ContentBox>
-        <ButtonWrapper>
-          <DeleteButton>삭제</DeleteButton>
-          <BackButton>뒤로가기</BackButton>
-        </ButtonWrapper>
-      </BigWrapper>
+      {post && (
+        <BigWrapper>
+          <>
+            <TitleWrapper>
+              <TitleBox>{post.title}</TitleBox>
+              <ScoreBox>{post.score}</ScoreBox>
+            </TitleWrapper>
+            <ContentBox>{post.content}</ContentBox>
+            <ButtonWrapper>
+              <Link to={"/"}>
+                <DeleteButton onClick={handleDelete}>삭제</DeleteButton>
+              </Link>
+              <Link to={"/"}>
+                <BackButton>뒤로가기</BackButton>
+              </Link>
+            </ButtonWrapper>
+          </>
+        </BigWrapper>
+      )}
     </Background>
   );
 }
