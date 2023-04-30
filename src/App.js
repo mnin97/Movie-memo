@@ -1,20 +1,23 @@
-import MainPage from "./\bMain/Main";
-import "./App.css";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
 import SubmitPage from "./Submit/Submit";
-import { Routes, Route } from "react-router-dom";
 import DetailPage from "./Detail/Detail";
+import MainPage from "./Main/Main";
 import { Reset } from "styled-reset";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Reset />
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/submit" element={<SubmitPage />} />
-        <Route path="/detail/:id" element={<DetailPage />} />
-      </Routes>
-    </div>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/submit" element={<SubmitPage />} />
+          <Route path="/detail/:id" element={<DetailPage />} />
+        </Routes>
+        //{" "}
+      </BrowserRouter>
+    </>
   );
 }
 

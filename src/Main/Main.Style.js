@@ -7,10 +7,11 @@ export const BG = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
 `;
 
 export const TitleBox = styled.div`
-  margin: 0;
+  margin: 0 auto;
   padding-right: 225px;
   padding-top: 50px;
 
