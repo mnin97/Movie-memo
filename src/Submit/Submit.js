@@ -32,6 +32,8 @@ export default function SubmitPage() {
     localStorage.setItem("posts", JSON.stringify(posts));
   };
 
+  //t수정
+
   return (
     <BG>
       <TWrapper>
