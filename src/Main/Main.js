@@ -45,13 +45,17 @@ export default function MainPage() {
             .filter(
               (post) =>
                 post.title.toLowerCase().includes(search.toLowerCase()) &&
-                (score === "" || post.score == parseInt(score))
+                (score === "" || post.score === parseInt(score))
             )
-            .map((a) => (
-              <Link to={`/detail/${a.id}`} style={{ textDecoration: "none" }}>
+            .map((post) => (
+              <Link
+                to={`/detail/${post.id}`}
+                style={{ textDecoration: "none" }}
+                key={post.id}
+              >
                 <Post>
-                  <h3>{a.title}</h3>
-                  <p>{a.score}</p>
+                  <h3>{post.title}</h3>
+                  <p>{post.score}</p>
                 </Post>
               </Link>
             ))}
