@@ -7,17 +7,16 @@ import { Reset } from "styled-reset";
 
 function App() {
   return (
-    <>
-      <Reset />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <div className="App">
+        <Reset />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/submit" element={<SubmitPage />} />
           <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
-        //{" "}
-      </BrowserRouter>
-    </>
+      </div>
+    </BrowserRouter>
   );
 }
 
