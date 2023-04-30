@@ -42,11 +42,11 @@ export default function MainPage() {
         </InputBox>
         <PostBox>
           {posts
-            .filter(
-              (post) =>
-                post.title.toLowerCase().includes(search.toLowerCase()) &&
-                (score === "" || post.score === parseInt(score))
-            )
+            // .filter(
+            //   (post) =>
+            //     post.title.toLowerCase().includes(search.toLowerCase()) &&
+            //     (score === "" || post.score === score)
+            // )
             .map((post) => (
               <Link
                 to={`/detail/${post.id}`}

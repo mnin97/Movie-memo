@@ -8,6 +8,18 @@ export const Background = styled.div`
   background-repeat: repeat;
 `;
 
+export const StyledTextArea = styled.textarea`
+  width: 58%;
+  border-radius: 5px;
+  height: 300px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+`;
+
 export const BigWrapper = styled.div`
   display: flex;
   flex-direction: column;

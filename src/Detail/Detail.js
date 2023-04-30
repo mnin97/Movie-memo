@@ -4,9 +4,9 @@ import {
   Background,
   BigWrapper,
   ButtonWrapper,
-  ContentBox,
   DeleteButton,
   ScoreBox,
+  StyledTextArea,
   TitleBox,
   TitleWrapper,
 } from "./Detail.Style";
@@ -16,6 +16,10 @@ export default function DetailPage() {
   const [posts] = useState(JSON.parse(localStorage.getItem("posts")));
   const { id } = useParams();
   const post = posts.find((a) => a.id === id);
+
+  const ContentBox = ({ content }) => {
+    return <StyledTextArea value={content} readOnly />;
+  };
 
   const handleDelete = () => {
     const updatedPosts = posts.filter((p) => p.id !== id);
@@ -34,7 +38,7 @@ export default function DetailPage() {
               <TitleBox>{post.title}</TitleBox>
               <ScoreBox>{post.score}</ScoreBox>
             </TitleWrapper>
-            <ContentBox>{post.content}</ContentBox>
+            <ContentBox content={post.content} />
             <ButtonWrapper>
               <Link to={"/"}>
                 <DeleteButton onClick={handleDelete}>삭제</DeleteButton>
