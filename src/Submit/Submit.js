@@ -32,7 +32,7 @@ export default function SubmitPage() {
     localStorage.setItem("posts", JSON.stringify(posts));
   };
 
-  // 수정
+  // 수정해봤음
 
   return (
     <BG>
