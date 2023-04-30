@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WriteBox2 = styled.div`
-  width: 25rem;
+  width: 25.1rem;
   height: 31.25rem;
   margin: 0 auto;
   border: 3px solid #ffffff;
