@@ -14,7 +14,6 @@ import {
   WriteBox2,
 } from "./Submit.Style";
 import { useState } from "react";
-import { BackButton } from "../Detail/Detail.Style";
 
 export default function SubmitPage() {
   const [title, setTitle] = useState(""); // 상태값을 관리하기위해 useState를 사용
