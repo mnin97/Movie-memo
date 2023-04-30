@@ -25,14 +25,14 @@ export default function SubmitPage() {
       title: title,
       score: score,
       content: content,
-      id: uuidv4(), // 아이디 생성
+      id: uuidv4(), // 아이디 생성해주는거임
     };
     let posts = JSON.parse(localStorage.getItem("posts")) || [];
     posts.push(post);
     localStorage.setItem("posts", JSON.stringify(posts));
   };
 
-  //t수정
+  // 수정
 
   return (
     <BG>
