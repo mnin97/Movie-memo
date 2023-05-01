@@ -8,6 +8,14 @@ export const WriteBox2 = styled.div`
   border-radius: 3px;
   position: relative;
   top: 100px;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    border-radius: 6px;
+    height: 65%;
+    top: 50px;
+    padding-bottom: 50px;
+  }
 `;
 
 export const TitleInputWrapper = styled.div`
@@ -15,6 +23,10 @@ export const TitleInputWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const TitleInput = styled.input`
@@ -23,8 +35,14 @@ export const TitleInput = styled.input`
   border-radius: 3px;
   border: none;
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 15px;
   background-color: rgb(255, 255, 255);
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+    height: 40px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const ScoreInput = styled.input`
@@ -33,23 +51,33 @@ export const ScoreInput = styled.input`
   border-radius: 3px;
   border: none;
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 35px;
   background-color: rgb(255, 255, 255);
+
+  @media screen and (max-width: 768px) {
+    width: 17%;
+    height: 40px;
+    margin-left: 0px;
+  }
 `;
 
 export const ContentsInputWrapper = styled.div`
   width: 100%;
-
   display: flex;
   justify-content: flex-start;
   padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+    margin-left: 20px;
+  }
 `;
 
 export const ContentInput = styled.textarea`
   width: 90%;
   height: 300px;
-
   vertical-align: top;
   border: none;
   resize: none;
@@ -61,10 +89,14 @@ export const ContentInput = styled.textarea`
   font-family: inherit;
 
   ::placeholder {
-    font-size: 20px;
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 89%;
+    height: 250px;
   }
 `;
-
 export const SubmitButton = styled.button`
   font-weight: bold;
   align-items: center;
@@ -80,6 +112,11 @@ export const SubmitButton = styled.button`
   position: relative;
   bottom: 12px;
   margin-right: 20px;
+
+  @media screen and (max-width: 768px) {
+    height: 35px;
+    margin-top: 20px;
+  }
 `;
 
 export const TWrapper = styled.div`
@@ -102,6 +139,14 @@ export const TWrapper = styled.div`
     position: relative;
     right: 10px;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-left: 37px;
+    justify-content: center;
   }
 `;
 
@@ -126,4 +171,9 @@ export const BackBtn = styled.button`
   position: relative;
   bottom: 12px;
   margin-left: 20px;
+
+  @media screen and (max-width: 768px) {
+    height: 35px;
+    margin-top: 20px;
+  }
 `;

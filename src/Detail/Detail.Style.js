@@ -18,6 +18,10 @@ export const StyledTextArea = styled.textarea`
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 export const BigWrapper = styled.div`
@@ -45,6 +49,11 @@ export const TitleBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 68%;
+    font-size: 20px;
+  }
 `;
 
 export const ScoreBox = styled.div`
@@ -59,6 +68,11 @@ export const ScoreBox = styled.div`
   font-size: 30px;
   font-weight: bold;
   color: rgb(109, 86, 245);
+
+  @media screen and (max-width: 768px) {
+    width: 20%;
+    font-size: 25px;
+  }
 `;
 
 export const ContentBox = styled.textarea`
@@ -71,11 +85,16 @@ export const ContentBox = styled.textarea`
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
-`;
 
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+`;
 export const ButtonWrapper = styled.div`
-  width: 61.5%;
+  width: 90.5%;
+  margin-top: 40px;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
 `;
 

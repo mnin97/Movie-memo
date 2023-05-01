@@ -15,7 +15,6 @@ import { useEffect, useState } from "react";
 
 export default function MainPage() {
   const [posts, setPosts] = useState([]);
-
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem("posts"));
     if (storedPosts) {
