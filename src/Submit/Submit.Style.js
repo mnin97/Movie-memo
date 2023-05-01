@@ -156,6 +156,10 @@ export const BtnWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const BackBtn = styled.button`
