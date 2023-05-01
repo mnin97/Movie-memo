@@ -104,7 +104,8 @@ export const PostBox = styled.div`
   margin-top: 20px;
   width: 100%;
   max-height: 380px;
-
+  overflow-y: scroll;
+  overflow-x: hidden;
   @media screen and(max-width:768px) {
     width: 50%;
   }
@@ -138,7 +139,7 @@ export const Post = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 94%;
+    width: 90%;
     margin-left: 0px;
     padding: 10px;
 
