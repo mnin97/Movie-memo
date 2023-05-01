@@ -9,7 +9,7 @@ export const Background = styled.div`
 `;
 
 export const StyledTextArea = styled.textarea`
-  width: 58%;
+  width: 60%;
   border-radius: 5px;
   height: 300px;
   background-color: #ffffff;
@@ -91,11 +91,15 @@ export const ContentBox = styled.textarea`
   }
 `;
 export const ButtonWrapper = styled.div`
-  width: 90.5%;
+  width: 60.5%;
   margin-top: 40px;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const DeleteButton = styled.button`
