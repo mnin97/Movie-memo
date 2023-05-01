@@ -1,22 +1,23 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 import SubmitPage from "./Submit/Submit";
 import DetailPage from "./Detail/Detail";
-import MainPage from "./Main/Main";
+
 import { Reset } from "styled-reset";
+import MainPage from "./\bMain/Main";
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div className="App">
+    <div className="App">
+      <HashRouter>
         <Reset />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/submit" element={<SubmitPage />} />
           <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </HashRouter>
+    </div>
   );
 }
 
