@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/movie-memo/static/css/main.e6c13ad2.css",
+    "main.js": "/movie-memo/static/js/main.3c893dd3.js",
+    "static/js/787.a9a2d811.chunk.js": "/movie-memo/static/js/787.a9a2d811.chunk.js",
+    "index.html": "/movie-memo/index.html",
+    "main.e6c13ad2.css.map": "/movie-memo/static/css/main.e6c13ad2.css.map",
+    "main.3c893dd3.js.map": "/movie-memo/static/js/main.3c893dd3.js.map",
+    "787.a9a2d811.chunk.js.map": "/movie-memo/static/js/787.a9a2d811.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3c893dd3.js"
+  ]
+}
