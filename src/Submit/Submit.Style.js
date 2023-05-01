@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// 반응형 작업완료
+
 export const WriteBox2 = styled.div`
   width: 25.1rem;
   height: 31.25rem;
