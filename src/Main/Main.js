@@ -11,7 +11,7 @@ import {
   TitleBox,
   WriteBox,
 } from "./Main.Style";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MainPage() {
   const [posts, setPosts] = useState([]);
