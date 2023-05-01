@@ -14,7 +14,15 @@ import {
 import { useState } from "react";
 
 export default function MainPage() {
-  const [posts] = useState(JSON.parse(localStorage.getItem("posts")));
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const storedPosts = JSON.parse(localStorage.getItem("posts"));
+    if (storedPosts) {
+      setPosts(storedPosts);
+    }
+  }, []);
+
   const [search, setSearch] = useState("");
   const [score, setScore] = useState("");
 
