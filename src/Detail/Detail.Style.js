@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// 반응형 수정완료
+
 export const Background = styled.div`
   width: 100%;
   height: 100vh;
