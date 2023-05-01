@@ -14,67 +14,63 @@ export const BG = styled.div`
 
 export const TitleBox = styled.div`
   margin: 0 auto;
-  padding-right: 225px;
+  padding-right: 10%;
   padding-top: 50px;
 
   h1 {
-    font-size: 50px;
+    font-size: 4rem;
     font-weight: bold;
     color: #ffffff;
-    margin-left: 50px;
+    margin-left: 2%;
     margin-bottom: 10px;
   }
 
   p {
-    margin-left: 22px;
+    margin-left: 1%;
     font-size: 1rem;
     font-weight: bold;
     color: #ffffff;
   }
 
-  @media screen and (max-width: 768px) {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: 35px;
-
+  @media only screen and (max-width: 768px) {
+    padding-right: 0;
+    padding-left: 2%;
     h1 {
-      font-size: 36px;
-      margin-left: 0px;
+      font-size: 3rem;
+      margin-left: 0;
     }
-
     p {
-      margin-left: 0px;
+      margin-left: 0;
     }
   }
 `;
 
 export const WriteBox = styled.div`
-  width: 25rem;
+  width: 90%;
+  max-width: 25rem;
   height: 31.25rem;
   margin: 0 auto;
   border-radius: 3px;
+  padding: 1rem;
 
-  @media screen and (max-width: 768px) {
-    width: 90%;
-    height: auto;
+  @media only screen and (max-width: 768px) {
+    padding: 0.5rem;
   }
 `;
 
 export const InputBox = styled.div`
   width: 100%;
   display: flex;
-  padding: 20px;
 
-  @media screen and (max-width: 768px) {
-    width: 60%;
-    flex-direction: column;
+  @media only screen and (max-width: 768px) {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 `;
 
 export const SearchInput = styled.input`
   width: 45%;
+  margin-left: 22px;
   height: 25px;
   padding-left: 20px;
   border: 2px solid #ffffff;
@@ -82,9 +78,9 @@ export const SearchInput = styled.input`
   font-weight: bold;
   background-color: #ffffff;
 
-  @media screen and (max-width: 768px) {
-    width: 60%;
-    margin-bottom: 10px;
+  @media only screen and (max-width: 768px) {
+    width: 65%;
+    margin: 0;
   }
 `;
 
@@ -98,16 +94,20 @@ export const FilterInput = styled.input`
   font-weight: bold;
   background-color: #ffffff;
 
-  @media screen and (max-width: 768px) {
-    width: 60%;
-    margin-left: 0px;
+  @media only screen and (max-width: 768px) {
+    width: 35%;
+    margin-left: 5px;
   }
 `;
 
 export const PostBox = styled.div`
+  margin-top: 20px;
   width: 100%;
   max-height: 380px;
-  overflow: auto;
+
+  @media screen and(max-width:768px) {
+    width: 50%;
+  }
 `;
 
 export const Post = styled.div`
@@ -134,14 +134,34 @@ export const Post = styled.div`
     font-size: 20px;
     font-weight: bold;
     padding-right: 20px;
-
     padding-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    width: 94%;
+    margin-left: 0px;
+    padding: 10px;
+
+    h3 {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      padding-top: 5px;
+    }
   }
 `;
 
 export const ButtonBox = styled.div`
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    margin-top: 10px;
+  }
 `;
 
 export const Button = styled.button`
@@ -156,4 +176,9 @@ export const Button = styled.button`
   border: none;
   margin-top: 10px;
   margin-right: 15px;
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 `;

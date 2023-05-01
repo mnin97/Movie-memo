@@ -6,10 +6,22 @@ export const Background = styled.div`
   background-image: url("https://ifh.cc/g/M92haW.jpg");
   background-size: cover;
   background-repeat: repeat;
+  text-align: center;
+`;
+
+export const LogoTitle = styled.div`
+  width: 100%;
+  margin-bottom: 40px;
+`;
+
+export const Title = styled.h1`
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 `;
 
 export const StyledTextArea = styled.textarea`
-  width: 60%;
+  width: 43%;
   border-radius: 5px;
   height: 300px;
   background-color: #ffffff;
@@ -18,9 +30,11 @@ export const StyledTextArea = styled.textarea`
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
+  font-family: inherit;
 
   @media screen and (max-width: 768px) {
     width: 80%;
+    font-family: inherit;
   }
 `;
 
@@ -34,12 +48,16 @@ export const BigWrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  width: 100%;
+  width: 58%;
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: space-around;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
-export const TitleBox = styled.div`
+export const TitleBox = styled.input`
   width: 40%;
   height: 50px;
   background-color: white;
@@ -49,34 +67,40 @@ export const TitleBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  padding-left: 30px;
 
   @media screen and (max-width: 768px) {
-    width: 68%;
+    width: 58%;
     font-size: 20px;
   }
 `;
 
-export const ScoreBox = styled.div`
-  width: 20%;
+export const ScoreBox = styled.input`
+  width: 10%;
+  text-align: center;
   height: 50px;
   background-color: white;
-  margin-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 30px;
-  font-weight: bold;
+  border: none;
   color: rgb(109, 86, 245);
+  margin-left: 1.5vw;
 
   @media screen and (max-width: 768px) {
+    text-align: center;
     width: 20%;
     font-size: 25px;
+    margin-left: 1vw;
   }
 `;
 
 export const ContentBox = styled.textarea`
-  width: 58%;
+  width: 43%;
   border-radius: 5px;
   height: 300px;
   background-color: #ffffff;
@@ -90,11 +114,11 @@ export const ContentBox = styled.textarea`
     width: 80%;
   }
 `;
+
 export const ButtonWrapper = styled.div`
-  width: 60.5%;
-  margin-top: 40px;
+  width: 45.5%;
+  margin-top: 10px;
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
 
   @media screen and (max-width: 768px) {
